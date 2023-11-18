@@ -292,7 +292,7 @@ var LGTV = function (config) {
         } else if (!connection.connected) {
             that.emit('connecting', host);
             connection = {};
-            client.connect(host);
+            client.connect(host, null, null, null, { rejectUnauthorized: false });
         }
     };
 
